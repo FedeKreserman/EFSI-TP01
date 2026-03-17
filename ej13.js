@@ -1,7 +1,5 @@
 function sumarEdades(usuarios) {
-  return usuarios.reduce(function(total, usuario) {
-    return total + usuario.edad;
-  }, 0);
+  return usuarios.reduce((total, usuario)=>total + usuario.edad,0); 
 }
 
 function mostrarSumaEdades() {
@@ -13,7 +11,5 @@ function mostrarSumaEdades() {
 
   let suma = sumarEdades(usuarios);
 
-  let resultado = document.getElementById("resultadoEdades");
-
-  resultado.innerHTML = "Suma total de edades: " + suma;
+  document.getElementById("resultadoEdades").innerHTML = "Resultado: " + suma;
 }
